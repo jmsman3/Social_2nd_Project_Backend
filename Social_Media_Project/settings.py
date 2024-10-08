@@ -30,14 +30,12 @@ SECRET_KEY = 'django-insecure-#nx$+v^74ywz))md8p3@2z^e^5-fzb^3xvfao(qn+5-ncojomx
 DEBUG = True
 
 # ALLOWED_HOSTS = ['*']
-ALLOWED_HOSTS = ["127.0.0.1", ".vercel.app"]
+# ALLOWED_HOSTS = ["127.0.0.1", ".vercel.app"]
+ALLOWED_HOSTS = ["127.0.0.1", "https://social-2nd-project-backend.vercel.app"]
 
 CSRF_TRUSTED_ORIGINS = [
-
-    # 'https://final-food-project.onrender.com',
-    'https://social-2nd-project-backend.vercel.app/',
-    'http://127.0.0.1',  # Local developme
-    'http://127.0.0.1:8000',
+    'http://127.0.0.1:5500',  # Frontend running locally
+    'https://socialproject2024.netlify.app/',  # deployed backend
 ]
 # Application definition
 
@@ -74,7 +72,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-CORS_ALLOW_ALL_ORIGINS = True  # Allow all origins to access  API
+CORS_ALLOW_ALL_ORIGINS =True  # Allow all origins to access  API
 
 # CORS configuration
 
