@@ -35,7 +35,7 @@ ALLOWED_HOSTS = ["127.0.0.1", ".vercel.app"]
 CSRF_TRUSTED_ORIGINS = [
 
     # 'https://final-food-project.onrender.com',
-    'https://twond-project-backened.onrender.com',
+    'https://social-2nd-project-backend.vercel.app/',
     'http://127.0.0.1',  # Local developme
     'http://127.0.0.1:8000',
 ]
