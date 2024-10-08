@@ -1,3 +1,5 @@
+django
+djangorestframework
 django-email
 numpy
 pillow
@@ -17,3 +19,4 @@ tzdata
 urllib3
 wheel
 whitenoise
+django-cors-headers 
