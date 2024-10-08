@@ -29,12 +29,20 @@ SECRET_KEY = 'django-insecure-#nx$+v^74ywz))md8p3@2z^e^5-fzb^3xvfao(qn+5-ncojomx
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-# ALLOWED_HOSTS = ['*']
-ALLOWED_HOSTS = ["127.0.0.1", ".vercel.app"]
+ALLOWED_HOSTS = ['*']
+# ALLOWED_HOSTS = ["127.0.0.1", ".vercel.app"]
+# ALLOWED_HOSTS = ["127.0.0.1", "https://social-2nd-project-backend.vercel.app"]
+CORS_ALLOW_ALL_ORIGINS = True
+CORS_ORIGIN_ALLOW_ALL = True
 
+CORS_ALLOWED_ORIGINS = [
+    'http://127.0.0.1:5500',
+    "https://social-2nd-project-backend.vercel.app",
+
+]
 CSRF_TRUSTED_ORIGINS = [
-    'http://127.0.0.1:5500',  # Frontend running locally
-    'https://social-2nd-project-backend.vercel.app',  # deployed backend
+    "https://social-2nd-project-backend.vercel.app",
+    'http://127.0.0.1:5500',  # Frontend running locally 
 ]
 # Application definition
 
@@ -71,11 +79,8 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-CORS_ALLOW_ALL_ORIGINS = True  # Allow all origins to access  API
 
-# CORS configuration
 
-CORS_ALLOW_CREDENTIALS = True  # Allow credentials like cookies to be sent
 CORS_ALLOW_METHODS = [
     'GET',
     'POST',
@@ -131,6 +136,17 @@ REST_FRAMEWORK = {
 #     }
 # }
 
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'postgres',
+        'USER': 'postgres.kjbdgbdulkunsvgzmgwp',
+        'PASSWORD': 'F9rId9xGlXAV81WH',
+        'HOST': 'aws-0-ap-southeast-1.pooler.supabase.com',
+        'PORT': '6543'
+    }
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
@@ -196,14 +212,3 @@ EMAIL_USE_TLS = True
 EMAIL_PORT = 587
 EMAIL_HOST_USER = env("EMAIL")
 EMAIL_HOST_PASSWORD = env("EMAIL_PASSWORD")
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'postgres',
-        'USER': 'postgres.kjbdgbdulkunsvgzmgwp',
-        'PASSWORD': 'F9rId9xGlXAV81WH',
-        'HOST': 'aws-0-ap-southeast-1.pooler.supabase.com',
-        'PORT': '6543'
-    }
-}
