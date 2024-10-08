@@ -37,7 +37,7 @@ CORS_ORIGIN_ALLOW_ALL = True
 
 CORS_ALLOWED_ORIGINS = [
     'http://127.0.0.1:5500',
-    "https://social-2nd-project-backend.vercel.app",
+    "https://socialproject2024.netlify.app/",
 
 ]
 CSRF_TRUSTED_ORIGINS = [
