@@ -74,19 +74,19 @@ class PostApiView(APIView):
         except Profile.DoesNotExist:
             return Response({'error': 'Profile not found'}, status=status.HTTP_404_NOT_FOUND)
         
-        #  image upload
-        if 'image' in request.FILES:
-            image_file = request.FILES['image']
-            image_url = upload_image_to_imgbb(image_file)
-            if image_url:
-                data['image'] = image_url  
+        # #  image upload
+        # if 'image' in request.FILES:
+        #     image_file = request.FILES['image']
+        #     image_url = upload_image_to_imgbb(image_file)
+        #     if image_url:
+        #         data['image'] = image_url  
 
-        #  video upload
-        if 'video' in request.FILES:
-            video_file = request.FILES['video']
-            video_url = upload_video_to_cloudinary(video_file)
-            if video_url:
-                data['video'] = video_url  
+        # #  video upload
+        # if 'video' in request.FILES:
+        #     video_file = request.FILES['video']
+        #     video_url = upload_video_to_cloudinary(video_file)
+        #     if video_url:
+        #         data['video'] = video_url  
                 
         serializer = PostSerializer(data=data)
         if serializer.is_valid():
