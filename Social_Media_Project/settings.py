@@ -71,6 +71,12 @@ MIDDLEWARE = [
 
 CORS_ALLOW_ALL_ORIGINS = True
 
+CORS_ORIGIN_WHITELIST = (
+'https://frontofsocial.vercel.app',
+'http://127.0.0.1:8000',
+'http://localhost:8000',
+)
+
 
 ROOT_URLCONF = 'Social_Media_Project.urls'
 
