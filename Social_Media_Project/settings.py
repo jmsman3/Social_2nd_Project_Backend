@@ -37,11 +37,12 @@ CORS_ORIGIN_ALLOW_ALL = True
 
 CORS_ALLOWED_ORIGINS = [
     'http://127.0.0.1:5500',
-    "https://socialproject2024.netlify.app/",
+    "https://2nd-project-frontend.vercel.app/",
 
 ]
 CSRF_TRUSTED_ORIGINS = [
-    "https://social-2nd-project-backend.vercel.app",
+    # "https://social-2nd-project-backend.vercel.app",
+    "https://social-2nd-project-backend-72na3ocnx.vercel.app",
     'http://127.0.0.1:5500',  # Frontend running locally 
 ]
 # Application definition
