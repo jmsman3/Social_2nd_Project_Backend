@@ -41,8 +41,8 @@ CORS_ALLOWED_ORIGINS = [
 
 ]
 CSRF_TRUSTED_ORIGINS = [
-    # "https://social-2nd-project-backend.vercel.app",
-    "https://social-2nd-project-backend-72na3ocnx.vercel.app",
+    "https://social-2nd-project-backend.vercel.app",
+    # "https://social-2nd-project-backend-72na3ocnx.vercel.app",
     'http://127.0.0.1:5500',  # Frontend running locally 
 ]
 # Application definition
