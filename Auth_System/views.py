@@ -170,7 +170,7 @@ class UserRegistrationApiView(APIView):
             uid = urlsafe_base64_encode(force_bytes(user.pk))
             
             # confirm_link = f"http://127.0.0.1:8000/user/active/{uid}/{token}"
-            confirm_link = f"https://social-2nd-project-backend-72na3ocnx.vercel.app/user/active/{uid}/{token}"
+            confirm_link = f"https://social-2nd-project-backend.vercel.app/user/active/{uid}/{token}"
             print(confirm_link)
             email_subject = "Confirm Your Email"
             email_body = render_to_string('confirm_eamil.html', {'confirm_link' : confirm_link})
@@ -189,9 +189,9 @@ def activate(request ,uid64,token):
     if user is not None and default_token_generator.check_token(user,token):
         user.is_active=True
         user.save()
-        return redirect('https://2nd-project-frontend.vercel.app/login.html')
+        return redirect('https://dashing-smakager-3e3523.netlify.app/login.html')
     else:
-        return redirect('https://2nd-project-frontend.vercel.app/signup.html') 
+        return redirect('https://dashing-smakager-3e3523.netlify.app/signup.html') 
 
 
 class UserLoginApiView(APIView):
