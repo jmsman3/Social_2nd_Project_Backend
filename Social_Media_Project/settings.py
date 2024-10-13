@@ -37,7 +37,8 @@ CORS_ORIGIN_ALLOW_ALL = True
 
 CORS_ALLOWED_ORIGINS = [
     'http://127.0.0.1:5500',
-    "https://2nd-project-frontend.vercel.app",
+    # "https://2nd-project-frontend.vercel.app",
+    "https://frontofsocial-avoata0nc-md-jubaer-mahmud-sarkers-projects.vercel.app",
 
 ]
 CSRF_TRUSTED_ORIGINS = [
